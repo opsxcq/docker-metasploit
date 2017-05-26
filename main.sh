@@ -7,7 +7,9 @@ echo '[+] Initializing postgres'
 service postgresql start
 echo '[+] Initializing tor'
 service tor start
-echo '[+] Updating msf'
-/opt/msf/msfupdate --git-branch master
+
+#echo '[+] Updating msf'
+#/opt/msf/msfupdate --git-branch master
+
 echo '[+] Well done, enjoy your shell'
 /bin/bash
