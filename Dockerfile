@@ -58,7 +58,10 @@ VOLUME /tmp/data/
 EXPOSE 4444
 
 # For browser exploits
+EXPOSE 80
+EXPOSE 8080
 EXPOSE 443
+EXPOSE 8081
 
 ENTRYPOINT ["/main.sh"]
 
