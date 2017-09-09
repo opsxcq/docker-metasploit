@@ -1,10 +1,10 @@
 FROM debian:jessie
 
-LABEL maintainer "opsxcq@thestorm.com.br"
+LABEL maintainer "opsxcq@strm.sh"
 
 RUN apt-get update && \
     apt-get upgrade -y && \
-    apt-get -y install \
+    DEBIAN_FRONTEND=noninteractive apt-get -y install \
     git build-essential zlib1g zlib1g-dev \
     libxml2 libxml2-dev libxslt-dev locate \
     libreadline6-dev libcurl4-openssl-dev git-core \
@@ -13,8 +13,8 @@ RUN apt-get update && \
     postgresql-contrib postgresql-client libpq-dev \
     libapr1 libaprutil1 libsvn1 \
     libpcap-dev libsqlite3-dev libgmp3-dev \
-    tor torsocks nasm vim nmap ntpdate\
-    && rm -rf /var/lib/apt/lists/*
+    tor torsocks nasm vim nmap ntpdate && \
+    rm -rf /var/lib/apt/lists/*
 
 # Just a trick to keep it always doing the whole process
 COPY README.md /
