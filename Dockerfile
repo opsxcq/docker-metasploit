@@ -5,7 +5,7 @@ LABEL maintainer "opsxcq@strm.sh"
 RUN apt-get update && \
     apt-get upgrade -y && \
     DEBIAN_FRONTEND=noninteractive apt-get -y install \
-    git build-essential zlib1g zlib1g-dev \
+    git tmux build-essential zlib1g zlib1g-dev \
     libxml2 libxml2-dev libxslt-dev locate \
     libreadline6-dev libcurl4-openssl-dev git-core \
     libssl-dev libyaml-dev openssl autoconf libtool \
