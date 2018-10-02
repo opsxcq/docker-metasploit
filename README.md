@@ -24,6 +24,19 @@ Then it will run all services (tor and postgres) and start a *tmux* session
 ![print](print.png)
 
 
+## Tmux shortcuts
+
+Use `Ctrl + b` then:
+
+ - `c` - Creates a new window.
+ - `"` - Split the window vertically.
+ - `%` - Split the window horitonzatlly.
+ - `o` - Switch the focus to another pane.
+ - Any arrow key - Switch the focus to another pane in that direction.
+ - `n` - Next window.
+ - `p` - Previous window
+ - `0` - Go to window number 0, by pressing 1 it will to go to window 1 and so on.
+ - `w` - List windows.
 
 
 Last update: Tue Oct  2 13:56:39 UTC 2018
