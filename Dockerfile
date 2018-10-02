@@ -19,6 +19,8 @@ RUN apt-get update && \
 # Just a trick to keep it always doing the whole process
 COPY README.md /
 
+COPY tmux.conf /root/.tmux.conf
+
 # Get Metasploit
 RUN cd /opt && \
     git clone https://github.com/rapid7/metasploit-framework.git msf && \
