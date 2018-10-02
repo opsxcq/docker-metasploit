@@ -12,4 +12,4 @@ service tor start
 #/opt/msf/msfupdate --git-branch master
 
 echo '[+] Well done, enjoy your shell'
-/bin/bash
+tmux
