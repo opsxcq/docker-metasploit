@@ -19,5 +19,12 @@ docker run --rm -it \
        strm/metasploit
 ```
 
+Then it will run all services (tor and postgres) and start a *tmux* session
+
+![print](print.png)
+
+
+
+
 Last update: Tue Oct  2 13:56:39 UTC 2018
 
