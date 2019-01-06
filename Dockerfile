@@ -26,7 +26,8 @@ RUN cd /opt && \
     git clone https://github.com/rapid7/metasploit-framework.git msf && \
     cd msf && \
     # Setup rvm
-    curl -sSL https://rvm.io/mpapis.asc | gpg --import && \
+    curl -sSL https://rvm.io/mpapis.asc | gpg --import - && \
+    curl -sSL https://rvm.io/pkuczynski.asc | gpg --import - && \
     curl -L https://get.rvm.io | bash -s stable && \
     /bin/bash -l -c "rvm requirements" && \
     /bin/bash -l -c "rvm install 2.3.1" && \
