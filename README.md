@@ -39,4 +39,4 @@ Use `Ctrl + b` then:
  - `w` - List windows.
 
 
-Last updated: Mon Jan 7 12:04:20 UTC 2019
+Last updated: Mon Jan 7 12:04:51 UTC 2019
