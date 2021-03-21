@@ -1,4 +1,4 @@
-FROM debian:jessie
+FROM debian:buster
 
 LABEL maintainer "opsxcq@strm.sh"
 
@@ -30,8 +30,8 @@ RUN cd /opt && \
     curl -sSL https://rvm.io/pkuczynski.asc | gpg --import - && \
     curl -L https://get.rvm.io | bash -s stable && \
     /bin/bash -l -c "rvm requirements" && \
-    /bin/bash -l -c "rvm install 2.3.1" && \
-    /bin/bash -l -c "rvm use 2.3.1 --default" && \
+    /bin/bash -l -c "rvm install 2.7.2" && \
+    /bin/bash -l -c "rvm use 2.7.2 --default" && \
     /bin/bash -l -c "source /usr/local/rvm/scripts/rvm" && \
     /bin/bash -l -c "gem install bundler" && \
     /bin/bash -l -c "source /usr/local/rvm/scripts/rvm && which bundle" && \
