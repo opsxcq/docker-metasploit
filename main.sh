@@ -12,4 +12,5 @@ service tor start
 #/opt/msf/msfupdate --git-branch master
 
 echo '[+] Well done, enjoy your shell'
-tmux new-session  "msfconsole; read"
+cd /opt/msf/
+tmux new-session "./msfconsole; read"
