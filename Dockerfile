@@ -13,7 +13,8 @@ RUN apt-get update && \
     postgresql-contrib postgresql-client libpq-dev \
     libapr1 libaprutil1 libsvn1 \
     libpcap-dev libsqlite3-dev libgmp3-dev \
-    tor torsocks nasm vim nmap ntpdate && \
+    tor torsocks nasm vim nmap ntpdate \
+    emacs hydra hashcat hashcat-data && \
     rm -rf /var/lib/apt/lists/*
 
 # Just a trick to keep it always doing the whole process
