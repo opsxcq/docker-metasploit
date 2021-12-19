@@ -9,7 +9,7 @@ echo '[+] Initializing tor'
 service tor start
 
 #echo '[+] Updating msf'
-#/opt/msf/msfupdate --git-branch master
+/opt/msf/msfupdate --git-branch master
 
 echo '[+] Well done, enjoy your shell'
 cd /opt/msf/

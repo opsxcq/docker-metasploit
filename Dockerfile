@@ -3,7 +3,6 @@ FROM debian:buster
 LABEL maintainer "opsxcq@strm.sh"
 
 RUN apt-get update && \
-    apt-get upgrade -y && \
     DEBIAN_FRONTEND=noninteractive apt-get -y install \
     git tmux build-essential zlib1g zlib1g-dev \
     libxml2 libxml2-dev libxslt-dev locate \
@@ -16,9 +15,6 @@ RUN apt-get update && \
     tor torsocks nasm vim nmap ntpdate \
     emacs hydra hashcat hashcat-data && \
     rm -rf /var/lib/apt/lists/*
-
-# Just a trick to keep it always doing the whole process
-COPY README.md /
 
 COPY tmux.conf /root/.tmux.conf
 
@@ -48,6 +44,10 @@ RUN cd /opt && \
 # PosgreSQL setup
 COPY ./db.sql /tmp/
 RUN /etc/init.d/postgresql start && su postgres -c "psql -f /tmp/db.sql"
+
+# Just a trick to keep it always doing the whole process
+COPY README.md /
+RUN cd /opt/msf && git pull
 
 USER root
 COPY ./database.yml /opt/msf/config/
